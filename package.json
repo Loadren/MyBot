@@ -9,6 +9,7 @@
   "author": "Loadren",
   "license": "ISC",
   "dependencies": {
+    "await-sleep": "0.0.1",
     "discord.js": "^11.2.1",
     "mysql": "^2.15.0"
   }

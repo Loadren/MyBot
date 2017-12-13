@@ -50,8 +50,10 @@ client.on('message', message => {
 
     for (i=0; i<classList.length; i++){
       if (classList[i].name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase() === classe.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()) {
+        classe = classList[i].name;
         for (j=0; j<classList[i].spec.length; j++){
           if (classList[i].spec[j].normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase() === spec.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()) {
+            spec = classList[i].spec[j];
             let allowedRole = message.guild.roles.find("name", "Murlock");
             if (message.member.roles.has(allowedRole.id)) {
               var priority = 2;
